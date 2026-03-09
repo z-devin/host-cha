@@ -312,7 +312,7 @@ function NYCMap({ hovered, onHover, onZoomCenter }) {
         const isH = hovered===n.id;
         return(
           <g key={n.id} onMouseEnter={()=>onHover(n.id)} onMouseLeave={()=>onHover(null)} onClick={()=>n.isTarget&&onZoomCenter()} style={{cursor:n.isTarget?"pointer":"default"}}>
-            <path d={cd.p} fill={leColor(n.le)} stroke={isH?"#1a1a1a":"rgba(255,255,255,0.5)"} strokeWidth={isH?0.5:0.2} opacity={isH?1:0.85} style={{transition:"all 0.15s"}}/>
+            <path d={cd.p} fill={leColor(n.le)} stroke={isH?"#1a1a1a":"rgba(255,255,255,0.5)"} strokeWidth={isH?0.3:0.1} opacity={isH?1:0.85} style={{transition:"all 0.15s"}}/>
             {n.isTarget&&<Pulse cx={cd.cx} cy={cd.cy} r={1.2} color="#c0392b"/>}
           </g>
         );
